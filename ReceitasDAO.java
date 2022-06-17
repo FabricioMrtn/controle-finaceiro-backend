@@ -25,7 +25,7 @@ public class ReceitasDAO {
 			jps.setString(1, receita.getDESCRICAO());
 			jps.setDouble(2, receita.getVALOR());
 			jps.setString(3, receita.getDATA_ENTRADA());
-			// SE O DATA_ENTRADA FOSSE DATE E NÃO STRING, EU TERIA QUE USAR O METODO ABAIXO
+			// SE O DATA_ENTRADA FOSSE DATE E Nï¿½O STRING, EU TERIA QUE USAR O METODO ABAIXO
 			// jps.setDate(3, new Date(receita.getDATA_ENTRADA().getTime()));
 
 			// para executar a query
@@ -61,7 +61,7 @@ public class ReceitasDAO {
 			conn = Conexao.createConnectionToMySQL();
 			jps = (JdbcPreparedStatement) conn.prepareStatement(sql);
 			jps.setInt(1, receita.getID());
-			// SE O DATA_SAIDA FOSSE DATE E NÃO STRING, EU TERIA QUE USAR O METODO ABAIXO
+			// SE O DATA_SAIDA FOSSE DATE E Nï¿½O STRING, EU TERIA QUE USAR O METODO ABAIXO
 			// jps.setDate(3, new Date(despesa.getDATA_SAIDA().getTime()));
 
 			// para ecxecutar a query
@@ -72,7 +72,6 @@ public class ReceitasDAO {
 			// caso tenha excecoes, ele vai printar
 		} finally {
 
-			// fechando as conexoes
 			try {
 				if (jps != null) {
 					jps.close();
@@ -100,7 +99,7 @@ public class ReceitasDAO {
 			jps.setDouble(2, receita.getVALOR());
 			jps.setString(3, receita.getDATA_ENTRADA());
 			jps.setInt(4, receita.getID());
-			// SE O DATA_SAIDA FOSSE DATE E NÃO STRING, EU TERIA QUE USAR O METODO ABAIXO
+			// SE O DATA_SAIDA FOSSE DATE E Nï¿½O STRING, EU TERIA QUE USAR O METODO ABAIXO
 			// jps.setDate(3, new Date(despesa.getDATA_SAIDA().getTime()));
 
 			// para ecxecutar a query
@@ -132,7 +131,6 @@ public class ReceitasDAO {
 
 		Connection conn = null;
 		JdbcPreparedStatement jps = null;
-		// CLASSE QUE VAI RECUPERAR OS DADOS DO BANCO
 		ResultSet rset = null;
 
 		try {
